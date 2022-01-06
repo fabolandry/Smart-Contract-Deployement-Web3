@@ -24,3 +24,6 @@ const deploy = async () => {
   provider.engine.stop;//Preventing a hanging deployement 
 };
 deploy()//call the deploy function created above.
+
+//------------------Contract succesfully deployed with the command node deploy.js------------------------------------
+//------------------Contract deployed to the address 0x80CFdF7BD74Ba3DE91B20FBF9c493B0224F1eb8B ---------------------
