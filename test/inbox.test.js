@@ -24,15 +24,15 @@ describe('Inbox', () => {
   it('deploys a contract', () => {
     assert.ok(inbox.options.address); // Check if the contract has an address if yes the transaction was successful 
   });
-
+  // Check if the contract has an initial string in the message variable from solidity contract
   it('has a default message', async () => {
-    const message = await inbox.methods.message().call(); // Check if the contract 
-    assert.equal(message, 'Share Wealth');                //has an innitial message
+    const message = await inbox.methods.message().call(); // store the updated variable in js variable 
+    assert.equal(message, 'Share Wealth');                //Check if the variable is the one set in line 19
   });
 
   it ('Can change the message ', async () => {
-    await inbox.methods.setMessage('Share love').send({ from: accounts[0]});
-    const message = await inbox.methods.message().call();
-    assert.equal(message, 'Share love');
+    await inbox.methods.setMessage('Share love').send({ from: accounts[0]}); // Update message variable in the contract
+    const message = await inbox.methods.message().call(); // store the updated variable in js variable 
+    assert.equal(message, 'Share love'); //Check the message variable was updated
   });
 });
