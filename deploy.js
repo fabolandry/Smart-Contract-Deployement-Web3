@@ -8,7 +8,7 @@ const { interface, bytecode } = require('./compile');
 //Setting up provider %% 2 argumments Mmemonic and api endpoint 
 const provider = new HDWalletprovider(
   'card tomato give need minor gym bounce round cherry castle switch long', //Empty account don't waiste your time
-  'https://rinkeby.infura.io/v3/8a03257f20f349ba86946846d73fa16f' //API endpoint provide by infura
+  'https://rinkeby.infura.io/v3/8a03257f20f349ba86946846d73fa16f' //API endpoint provided by infura
 );
 //Web3 instance creation
 const web3 = new Web3(provider);
